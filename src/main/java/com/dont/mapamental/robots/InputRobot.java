@@ -19,12 +19,14 @@ public class InputRobot extends Robot {
     public void start() {
         Utils.log("iniciando robô de input");
         String searchTerm = Utils.input("Digite o termo de pesquisa");
-        /*int prefixIndex = Utils.parseInt(Utils.input("Digite o prefixo: " + prefixes.stream().map(p -> prefixes.indexOf(p) + " -> " + p).collect(Collectors.joining(", "))));
+        /* não é necessário prefixo pois não estou gerando vídeo, mas fiz a implementação mesmo assim
+        int prefixIndex = Utils.parseInt(Utils.input("Digite o prefixo: " + prefixes.stream().map(p -> prefixes.indexOf(p) + " -> " + p).collect(Collectors.joining(", "))));
         while (prefixIndex < 0 || prefixIndex >= prefixes.size()) {
             prefixIndex = Utils.parseInt(Utils.input("Digite o prefixo: " + prefixes.stream().map(p -> prefixes.indexOf(p) + " -> " + p).collect(Collectors.joining(", "))));
         }
         String prefix = prefixes.get(prefixIndex);
-        this.content.setPrefix(prefix);*/
+        this.content.setPrefix(prefix);
+        */
         this.content.setSearchTerm(searchTerm);
     }
 
