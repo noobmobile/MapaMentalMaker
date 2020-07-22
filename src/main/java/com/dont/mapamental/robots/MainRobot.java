@@ -23,6 +23,7 @@ public class MainRobot extends Robot {
         this.imageRobot = new ImageRobot(content, googleKey, googleCx);
         this.mapaRobot = new MapaRobot(content);
         this.input = input;
+        // caso queira passar o input diretamente como argumento, sem o console precisar perguntar
         if (input != null) content.setSearchTerm(input);
     }
 
@@ -32,7 +33,8 @@ public class MainRobot extends Robot {
         Utils.log("iniciando robô principal");
         if (input == null) inputRobot.start();
         textRobot.start();
-        //imageRobot.start();
+        //imageRobot.start(); // as imagens acabam não sendo utilizadas em um mapa mental, mas fiz a implementação mesmo assim
+        // aqui seria a parte que monta os vídeos, porém acabei não implementando
         mapaRobot.start();
     }
 }
